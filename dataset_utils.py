@@ -444,7 +444,7 @@ class RGBInpaintGeneratedDataset(Dataset):
 		return len(self.img_fnames)
 
 	def img_path_to_latent_path(self, img_path):
-		return img_path.replace('/img_', '/latents_').replace('.png', '.npz')
+		return img_path.replace('/img_', '/latents_').replace('.png', '.')
 
 	def __getitem__(self, idx):
 		img_fname = self.img_fnames[idx]
